@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     ListView lvAndroidVersions;
     ArrayList<AndroidVersion> alAndroidVersions;
-    ArrayAdapter<String> aaAndroidVersions;
+    //ArrayAdapter<String> aaAndroidVersions;
+    CustomAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +32,11 @@ public class MainActivity extends AppCompatActivity {
         alAndroidVersions.add(item3);
 
 
-        aaAndroidVersions = new ArrayAdapter(this, android.R.layout.simple_list_item_1, alAndroidVersions);
+        //aaAndroidVersions = new ArrayAdapter(this, android.R.layout.simple_list_item_1, alAndroidVersions);
+        adapter = new CustomAdapter(this, R.layout.row, alAndroidVersions);
 
-        lvAndroidVersions.setAdapter(aaAndroidVersions);
+        //lvAndroidVersions.setAdapter(aaAndroidVersions);
+        lvAndroidVersions.setAdapter(adapter);
 
     }
 }
