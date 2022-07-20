@@ -31,9 +31,6 @@ public class AndroidVersion {
     @NonNull
     @Override
     public String toString() {
-        return "AndroidVersion{" +
-                "name='" + name + '\'' +
-                ", version='" + version + '\'' +
-                '}';
+        return name + ": " + version;
     }
 }
